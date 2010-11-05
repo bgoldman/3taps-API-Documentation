@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>3taps Developers</title>
+<script type="text/javascript" src="/scripts/jquery.js"></script>
+<script type="text/javascript">
+var exports = window;
+</script>
+<script type="text/javascript" src="/scripts/3taps.js"></script>
+<script type="text/javascript" src="/scripts/main.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/styles/reset.css" />
+<link rel="stylesheet" type="text/css" href="/styles/style.css" />
+
+<% if (controllerStyle) { %>
+	<link rel="stylesheet" type="text/css" href="/styles/helpers/<%= controller %>.css" />
+<% } %>
+
+<% if (controllerScript) { %>
+	<script type="text/javascript" src="/scripts/helpers/<%= controller %>.js"></script>
+<% } %>
+</head>
+<body>
+<div id="header">
+	<div id="header-intro">
+		what app are you building next?
+	</div>
+	<div id="logo">
+		<h1><a href="/"><span class="first">3</span>taps</span></a></h1>
+	</div>
+</div>
+<div id="container">
+	<div id="main">
+		<%- body %>
+	</div>
+</div>
+<div id="footer">
+	&copy; <%= (new Date()).getFullYear() %> 3taps
+</div>
+</body>
+</html>

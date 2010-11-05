@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule (.*) http://www.3vrooms.com:41019/$1 [P]

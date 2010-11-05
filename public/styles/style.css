@@ -1,0 +1,72 @@
+html, body {
+	background: #eee;
+	color: #333;
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+}
+
+div#header div#header-intro {
+	background: #BED600;
+	color: #000;
+	font-size: 24px;
+	padding: 20px 50px;
+}
+
+div#header div#logo {
+	background: #000;
+	font-size: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+div#header h1 {
+	margin: auto;
+	width: 960px;
+}
+
+div#header h1 a, div#header h1 a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+div#header h1 a span.first {
+	color: #BED600;
+}
+
+div#container {
+	background: #fff;
+	color: inherit;
+	margin: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	width: 960px;
+}
+
+div#main {
+	padding: 20px;
+}
+
+form#home-search ol {
+	overflow: hidden;
+}
+
+form#home-search ol li {
+	float: left;
+	margin-left: 10px;
+}
+
+form#home-search ol li.first {
+	margin-left: 0px;
+}
+
+div#footer {
+	background: #000;
+	bottom: 0px;
+	color: #fff;
+	left: 0px;
+	margin: auto;
+	text-align: center;
+	padding: 10px;
+	position: fixed;
+	right: 0px;
+}
