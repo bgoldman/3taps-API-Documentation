@@ -1,0 +1,3 @@
+cd ..
+GIT_DIR="`pwd`/.git"
+git reset --hard
