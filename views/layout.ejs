@@ -52,8 +52,8 @@ var exports = window;
 					<li>
 						<a href="/methods/<%= thisCategory.name %>"><%= thisCategory.name %></a>
 						<ol>
-							<% for (var j in category.methods) { %>
-								<% var method = category.methods[j] %>
+							<% for (var j in thisCategory.methods) { %>
+								<% var method = thisCategory.methods[j] %>
 								<li><a href="/methods/<%= thisCategory.name %>#methods.<%= thisCategory.name %>.<%= method.name %>"><%= method.name %></a></li>
 							<% } %>
 						</ol>

@@ -83,9 +83,9 @@ div#body ol {
 }
 
 div#body ol li {
-	border-bottom: 1px solid #ccc;
-	margin-bottom: 20px;
-	padding-bottom: 20px;
+	border-top: 1px solid #ccc;
+	margin-top: 20px;
+	padding-top: 20px;
 	width: 600px;
 }
 
@@ -95,10 +95,8 @@ div.description {
 }
 
 div.methods div.description {
-	background: #fafafa;
-	border: 1px solid #aaa;
-	margin-bottom: 5px;
-	padding: 5px;
+	background: #fff;
+	margin-bottom: 10px;
 }
 
 div.params {
@@ -110,8 +108,8 @@ div.params {
 
 div#body div.params ol li {
 	border: 0px;
-	margin-bottom: 0px;
-	padding-bottom: 5px;
+	margin-top: 0px;
+	padding-top: 5px;
 	width: auto;
 }
 
@@ -126,6 +124,7 @@ div#body div.returns ol li {
 	border: 0px;
 	margin-bottom: 0px;
 	padding-bottom: 5px;
+	white-space: pre-line;
 	width: auto;
 }
 

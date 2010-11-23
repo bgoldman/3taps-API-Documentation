@@ -9,7 +9,7 @@
 				<div class="description"><%= method.description %></div>
 				<h4>Params</h4>
 				<div class="params">
-					<% if (method.params) { %>
+					<% if (method.params && method.params[0].name != '') { %>
 						<ol>
 							<% for (var i in method.params) { %>
 								<% var param = method.params[i] %>
@@ -28,9 +28,7 @@
 						<ol>
 							<% for (var i in method.returns) { %>
 								<% var returns = method.returns[i] %>
-								<li>
-									<strong><%= returns.type %></strong> - <%= returns.desc %>
-								</li>
+								<li><strong><%= returns.type %></strong> - <%= returns.desc %></li>
 							<% } %>
 						</ol>
 					<% } else { %>
