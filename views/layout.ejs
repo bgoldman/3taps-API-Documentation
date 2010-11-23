@@ -1,16 +1,19 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<title>3taps Developers</title>
+<link href="/styles/reset.css" rel="stylesheet" type="text/css" />
+<link href="/styles/documentation.css" rel="stylesheet" type="text/css" />
+<link href="/styles/style.css" rel="stylesheet" type="text/css" />
+
 <script type="text/javascript" src="/scripts/jquery.js"></script>
+<script type="text/javascript" src="/scripts/jquery.form.js"></script>
+<script type="text/javascript" src="/scripts/jquery.scroll-to.js"></script>
 <script type="text/javascript">
 var exports = window;
 </script>
+<script type="text/javascript" src="/scripts/3taps-client.js"></script>
 <script type="text/javascript" src="/scripts/3taps.js"></script>
-<script type="text/javascript" src="/scripts/main.js"></script>
-
-<link rel="stylesheet" type="text/css" href="/styles/reset.css" />
-<link rel="stylesheet" type="text/css" href="/styles/style.css" />
+<script type="text/javascript" src="/scripts/documentation.js"></script>
 
 <% if (controllerStyle) { %>
 	<link rel="stylesheet" type="text/css" href="/styles/helpers/<%= controller %>.css" />
@@ -19,6 +22,7 @@ var exports = window;
 <% if (controllerScript) { %>
 	<script type="text/javascript" src="/scripts/helpers/<%= controller %>.js"></script>
 <% } %>
+<title>3taps Developers</title>
 </head>
 <body>
 <div id="header">
@@ -31,7 +35,35 @@ var exports = window;
 </div>
 <div id="container">
 	<div id="main">
-		<%- body %>
+		<div id="title">
+			<% if (typeof category != 'undefined') { %>
+				<h1>3taps Developers - <%= category %></h1>
+			<% } else { %>
+				<h1>3taps Developers</h1>
+			<% } %>
+		</div>
+		<div id="nav">
+			<ol>
+				<li>
+					<a href="/">Intro</a>
+				</li>
+				<% for (var i in documentation) { %>
+					<% var category = documentation[i] %>
+					<li>
+						<a href="/methods/<%= category.name %>"><%= category.name %></a>
+						<ol>
+							<% for (var j in category.methods) { %>
+								<% var method = category.methods[j] %>
+								<li><a href="/methods/<%= category.name %>#methods.<%= category.name %>.<%= method.name %>"><%= method.name %></a></li>
+							<% } %>
+						</ol>
+					</li>
+				<% } %>
+			</ol>
+		</div>
+		<div id="body">
+			<%- body %>
+		</div>
 	</div>
 </div>
 <div id="footer">

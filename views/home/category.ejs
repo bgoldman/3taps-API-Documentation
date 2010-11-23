@@ -1,0 +1,20 @@
+<h2 id="/methods/<%= category %>"><%= category %></h2>
+<div class="methods">
+	<ol>
+		<% for (var method in methods) { %>
+			<li id="methods.<%= category %>.<%= method %>">
+				<h3><%= method %></h3>
+				<div class="code"></div>
+				<a class="run" href="#methods.<%= category %>.<%= method %>">Click here to run the code.</a>
+				<br /><br />
+				<h4>Response</h4>
+				<div class="example">
+					Status: <span id="<%= category %>_<%= method %>_status">(run the code to get a response status)</span>
+					<br />
+					Value: <span id="<%= category %>_<%= method %>_result">(run the code to get a response value)</span>
+				</div>
+				<a class="top" href="#">back to top</a>
+			</li>
+		<% } %>
+	</ol>
+</div>

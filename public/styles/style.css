@@ -1,5 +1,5 @@
 html, body {
-	background: #eee;
+	background: #E1E3E4 url(http://3taps.com/img/network-lighter.png) top left repeat;
 	color: #333;
 	font-family: Arial, sans-serif;
 	font-size: 13px;
@@ -34,29 +34,20 @@ div#header h1 a span.first {
 }
 
 div#container {
-	background: #fff;
+	background: url(http://3taps.com/img/arc.png) center -100px no-repeat;
 	color: inherit;
-	margin: auto;
-	margin-bottom: 20px;
-	margin-top: 20px;
-	width: 960px;
 }
 
 div#main {
-	padding: 20px;
-}
-
-form#home-search ol {
+	margin: auto;
+	margin-bottom: 20px;
 	overflow: hidden;
+	padding-top: 20px;
+	width: 960px;
 }
 
-form#home-search ol li {
-	float: left;
-	margin-left: 10px;
-}
-
-form#home-search ol li.first {
-	margin-left: 0px;
+div#body {
+	padding: 20px;
 }
 
 div#footer {
