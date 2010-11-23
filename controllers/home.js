@@ -32,18 +32,17 @@ exports.controller = function(app, render) {
 	});
 	
 	app.get('/methods/:category', function(req, res) {
-		var category = req.params.category;
+		var categoryName = req.params.category;
 		
-		if (!documentation[category]) {
+		if (!documentation[categoryName]) {
 			res.redirect('/');
 		}
 		
-		var methods = documentation[category].methods;
-		
+		var category = documentation[categoryName];
 		render(res, 'home/category', {
 			category: category
 			,documentation: documentation
-			,methods: methods
+			,methods: category.methods
 		});
 	});
 };

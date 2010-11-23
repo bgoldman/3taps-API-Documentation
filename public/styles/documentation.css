@@ -58,19 +58,19 @@ div#body {
 
 div#body h2 {
 	color: #2554C7;
-	font-size: 24px;
+	font-size: 28px;
 	margin-bottom: 10px;
 	width: 600px;
 }
 
 div#body h3 {
-	font-size: 18px;
+	font-size: 22px;
 	margin-bottom: 10px;
 	width: 600px;
 }
 
 div#body h4 {
-	font-size: 14px;
+	font-size: 17px;
 	margin-bottom: 5px;
 }
 
@@ -87,6 +87,46 @@ div#body ol li {
 	margin-bottom: 20px;
 	padding-bottom: 20px;
 	width: 600px;
+}
+
+div.description {
+	margin-bottom: 20px;
+	white-space: pre-wrap;
+}
+
+div.methods div.description {
+	background: #fafafa;
+	border: 1px solid #aaa;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+div.params {
+	background: #fafafa;
+	border: 1px solid #aaa;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+div#body div.params ol li {
+	border: 0px;
+	margin-bottom: 0px;
+	padding-bottom: 5px;
+	width: auto;
+}
+
+div.returns {
+	background: #fafafa;
+	border: 1px solid #aaa;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+div#body div.returns ol li {
+	border: 0px;
+	margin-bottom: 0px;
+	padding-bottom: 5px;
+	width: auto;
 }
 
 div.code {

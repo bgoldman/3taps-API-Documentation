@@ -1,17 +1,50 @@
-<h2 id="/methods/<%= category %>"><%= category %></h2>
+<h2 id="/methods/<%= category %>"><%= category.name %></h2>
+<div class="description"><%= category.description %></div>
 <div class="methods">
 	<ol>
-		<% for (var method in methods) { %>
-			<li id="methods.<%= category %>.<%= method %>">
-				<h3><%= method %></h3>
+		<% for (var name in methods) { %>
+			<% method = methods[name] %>
+			<li id="methods.<%= category.name %>.<%= method.name %>">
+				<h3><%= method.name %></h3>
+				<div class="description"><%= method.description %></div>
+				<h4>Params</h4>
+				<div class="params">
+					<% if (method.params) { %>
+						<ol>
+							<% for (var i in method.params) { %>
+								<% var param = method.params[i] %>
+								<li>
+									<strong><%= param.name %> </strong> (<%= param.type %>) - <%= param.desc %>
+								</li>
+							<% } %>
+						</ol>
+					<% } else { %>
+						There are no params for this method.
+					<% } %>
+				</div>
+				<h4>Returns</h4>
+				<div class="returns">
+					<% if (method.returns) { %>
+						<ol>
+							<% for (var i in method.returns) { %>
+								<% var returns = method.returns[i] %>
+								<li>
+									<strong><%= returns.type %></strong> - <%= returns.desc %>
+								</li>
+							<% } %>
+						</ol>
+					<% } else { %>
+						There method has no return value.
+					<% } %>
+				</div>
 				<div class="code"></div>
-				<a class="run" href="#methods.<%= category %>.<%= method %>">Click here to run the code.</a>
+				<a class="run" href="#methods.<%= category.name %>.<%= method.name %>">Click here to run the code.</a>
 				<br /><br />
 				<h4>Response</h4>
 				<div class="example">
-					Status: <span id="<%= category %>_<%= method %>_status">(run the code to get a response status)</span>
+					Status: <span id="<%= category.name %>_<%= method.name %>_status">(run the code to get a response status)</span>
 					<br />
-					Value: <span id="<%= category %>_<%= method %>_result">(run the code to get a response value)</span>
+					Value: <span id="<%= category.name %>_<%= method.name %>_result">(run the code to get a response value)</span>
 				</div>
 				<a class="top" href="#">back to top</a>
 			</li>

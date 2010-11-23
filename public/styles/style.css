@@ -5,6 +5,14 @@ html, body {
 	font-size: 13px;
 }
 
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
+}
+
 div#header div#header-intro {
 	background: #BED600;
 	color: #000;

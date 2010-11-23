@@ -36,8 +36,8 @@ var exports = window;
 <div id="container">
 	<div id="main">
 		<div id="title">
-			<% if (typeof category != 'undefined') { %>
-				<h1>3taps Developers - <%= category %></h1>
+			<% if (typeof category.name != 'undefined') { %>
+				<h1>3taps Developers - <%= category.name %></h1>
 			<% } else { %>
 				<h1>3taps Developers</h1>
 			<% } %>
@@ -48,13 +48,13 @@ var exports = window;
 					<a href="/">Intro</a>
 				</li>
 				<% for (var i in documentation) { %>
-					<% var category = documentation[i] %>
+					<% var thisCategory = documentation[i] %>
 					<li>
-						<a href="/methods/<%= category.name %>"><%= category.name %></a>
+						<a href="/methods/<%= thisCategory.name %>"><%= thisCategory.name %></a>
 						<ol>
 							<% for (var j in category.methods) { %>
 								<% var method = category.methods[j] %>
-								<li><a href="/methods/<%= category.name %>#methods.<%= category.name %>.<%= method.name %>"><%= method.name %></a></li>
+								<li><a href="/methods/<%= thisCategory.name %>#methods.<%= thisCategory.name %>.<%= method.name %>"><%= method.name %></a></li>
 							<% } %>
 						</ol>
 					</li>

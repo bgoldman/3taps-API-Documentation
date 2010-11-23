@@ -23,7 +23,17 @@ ApiClientExamples.prototype = {
 	_attachNavEvents: function() {
 		$('div#nav a').click(function() {
 			var href = $(this).attr('href');
+			
+			if (href.indexOf('#') == -1) {
+				return true;
+			}
+			
 			var target_id = href.substr(href.indexOf('#') + 1);
+			
+			if (target_id == '') {
+				return true;
+			}
+			
 			target_id_escaped = target_id.replace(/\./g, '\\\.');
 			var target = $('#' + target_id_escaped);
 			
