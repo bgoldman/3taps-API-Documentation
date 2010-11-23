@@ -110,6 +110,7 @@ div#body div.params ol li {
 	border: 0px;
 	margin-top: 0px;
 	padding-top: 5px;
+	white-space: pre-line;
 	width: auto;
 }
 
@@ -122,8 +123,8 @@ div.returns {
 
 div#body div.returns ol li {
 	border: 0px;
-	margin-bottom: 0px;
-	padding-bottom: 5px;
+	margin-top: 0px;
+	padding-top: 5px;
 	white-space: pre-line;
 	width: auto;
 }

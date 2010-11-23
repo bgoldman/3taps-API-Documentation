@@ -13,9 +13,8 @@
 						<ol>
 							<% for (var i in method.params) { %>
 								<% var param = method.params[i] %>
-								<li>
-									<strong><%= param.name %> </strong> (<%= param.type %>) - <%= param.desc %>
-								</li>
+								<% if (param.name == '') continue %>
+								<li><strong><%= param.name %> </strong> (<%= param.type %>) - <%= param.desc %></li>
 							<% } %>
 						</ol>
 					<% } else { %>
