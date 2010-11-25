@@ -21,6 +21,9 @@ app.configure(function(){
     app.set('view engine', 'ejs');
 });
 
+global.fs = require('fs');
+global.utils = require('./lib/helpers/utils');
+
 var hooks = require('./lib/hooks');
 hooks.events.init(app);
 

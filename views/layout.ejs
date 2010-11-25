@@ -6,7 +6,6 @@
 <link href="/styles/style.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="/scripts/jquery.js"></script>
-<script type="text/javascript" src="/scripts/jquery.form.js"></script>
 <script type="text/javascript" src="/scripts/jquery.scroll-to.js"></script>
 <script type="text/javascript">
 var exports = window;
@@ -14,6 +13,7 @@ var exports = window;
 <script type="text/javascript" src="/scripts/3taps-client.js"></script>
 <script type="text/javascript" src="/scripts/3taps.js"></script>
 <script type="text/javascript" src="/scripts/documentation.js"></script>
+<script type="text/javascript" src="/scripts/hooks.js"></script>
 
 <% if (controllerStyle) { %>
 	<link rel="stylesheet" type="text/css" href="/styles/helpers/<%= controller %>.css" />
@@ -35,13 +35,6 @@ var exports = window;
 </div>
 <div id="container">
 	<div id="main">
-		<div id="title">
-			<% if (typeof category.name != 'undefined') { %>
-				<h1>3taps Developers - <%= category.name %></h1>
-			<% } else { %>
-				<h1>3taps Developers</h1>
-			<% } %>
-		</div>
 		<div id="nav">
 			<ol>
 				<li>

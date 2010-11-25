@@ -6,6 +6,11 @@ var threeTaps = new threeTapsLib.threeTaps(authId, agentId);
 var threeTapsClientDocumentation = require('../lib/apis/3taps-client-documentation');
 var documentation = threeTapsClientDocumentation.documentation();
 
+var data = [
+	{text: 'San Francisco, California'},
+	{text: 'Los Angeles, California'}
+];
+
 exports.controller = function(app, render) {
 	var methodAction = function(req, res) {
 		/*

@@ -56,6 +56,11 @@ ApiClientExamples.prototype = {
 			target_id_escaped = target_id.replace(/\./g, '\\\.');
 			var target = $('#' + target_id_escaped);
 			var code = target.children('div.code').text();
+			Hooks.setRunVars(target_id);
+			var callback = function(result) {
+				var resultString = JSON.stringify(result);
+				target.find('div.response').addClass('responded').text(resultString);
+			};
 			eval(code);
 			return false;
 		});

@@ -44,13 +44,16 @@ div#header h1 a span.first {
 div#container {
 	background: url(http://3taps.com/img/arc.png) center -100px no-repeat;
 	color: inherit;
+	padding-bottom: 40px;
+	padding-top: 20px;
 }
 
 div#main {
+	background: #f2f2f2;
+	border: 1px solid #ccc;
 	margin: auto;
 	margin-bottom: 20px;
 	overflow: hidden;
-	padding-top: 20px;
 	width: 960px;
 }
 
