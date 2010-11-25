@@ -1,8 +1,7 @@
 var controllers = [
 	'home'
+	,'proxy'
 ];
-
-var fs = require('fs');
 
 var render = function(controller, res, path, vars, options) {
 	vars = vars || {};
