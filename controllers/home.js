@@ -13,17 +13,6 @@ var data = [
 
 exports.controller = function(app, render) {
 	var methodAction = function(req, res) {
-		/*
-		var posts = [
-			{source: 'ebaym', category: 'ebay', location: 'ZZZ', heading: 'some title', body: 'some body', price: 5, currency: 'USD', externalID: 12345}
-			,{source: 'ebaym', category: 'ebay', location: 'ZZZ', heading: 'some title 2', body: 'some body 2', price: 6, currency: 'USD', externalID: 12346}
-			,{source: 'ebaym', category: 'ebay', location: 'ZZZ', heading: 'some title 3', body: 'some body 3', price: 7, currency: 'USD', externalID: 12347}
-		];
-		threeTaps.posting.get(posts, function(response) {
-			console.log(response);
-		});
-		*/
-		console.log(documentation);
 		render(res, 'home/index', {
 			documentation: documentation
 			,method: req.params.method

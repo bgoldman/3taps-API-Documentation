@@ -19,9 +19,6 @@ var proxy = function(method, req, res) {
 		});
 		result.on('end', function() {
 			res.write(data);
-			console.log(urlString);
-			console.log(data);
-			console.log(req.rawBody);
 			res.end();
 		});
 		res.writeHead(result.statusCode, result.headers);
