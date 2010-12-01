@@ -6,6 +6,9 @@
 			<% method = methods[name] %>
 			<li id="methods.<%= category.name %>.<%= method.name %>">
 				<h3><%= method.name %></h3>
+				<% if (method.restStructure) { %>
+					<h4><%= method.restStructure %></h4>
+				<% } %>
 				<div class="description"><%= method.description %></div>
 				<h4>Params</h4>
 				<div class="params">
@@ -41,6 +44,10 @@
 						There method has no return value.
 					<% } %>
 				</div>
+				<% if (method.restUrlExample) { %>
+					<h4>Example URL</h4>
+					<div class="example"><a href="<%= method.restUrlExample %>" target="_blank"><%= method.restUrlExample %></a></div>
+				<% } %>
 				<% if (method.exampleResponse) { %>
 					<h4>Example Response</h4>
 					<div class="example"><%= method.exampleResponse %></div>
