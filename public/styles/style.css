@@ -23,18 +23,26 @@ div#header div#header-intro {
 div#header div#logo {
 	background: #000;
 	font-size: 20px;
-	padding-bottom: 10px;
-	padding-top: 10px;
+	height: 35px;
 }
 
 div#header h1 {
 	margin: auto;
+	padding-top: 3px;
 	width: 960px;
 }
 
 div#header h1 a, div#header h1 a:visited {
+	background: url(http://3taps.com/img/logo-beta.png) top left no-repeat;
 	color: #fff;
+	height: 43px;
+	position: absolute;
 	text-decoration: none;
+	width: 99px;
+}
+
+div#header h1 a span {
+	display: none;
 }
 
 div#header h1 a span.first {
