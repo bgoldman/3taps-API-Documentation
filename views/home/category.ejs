@@ -50,11 +50,11 @@
 				<% } %>
 				<% if (method.exampleResponse) { %>
 					<h4>Example Response</h4>
-					<div class="example"><%= method.exampleResponse %></div>
+					<div class="example"><pre><%= method.exampleResponse %></pre></div>
 				<% } %>
 				<% if (method.exampleCode) { %>
 					<h4>Try It with Sample Code</h4>
-					<div class="code"><%= method.exampleCode %></div>
+					<div class="code"><pre><%= method.exampleCode %></pre></div>
 					<a class="run" href="#methods.<%= category.name %>.<%= method.name %>">Click here to run the code.</a>
 					<br /><br />
 					<div class="example response">Run the code to see a real response.</div>
