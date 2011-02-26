@@ -10,24 +10,26 @@
 					<h4><%= method.restStructure %></h4>
 				<% } %>
 				<div class="description"><%= method.description %></div>
-				<h4>Params</h4>
-				<div class="params">
-					<% if (method.params && method.params[0].name != '') { %>
-						<table>
-							<% for (var i in method.params) { %>
-								<% var param = method.params[i] %>
-								<% if (param.name == '') continue %>
-								<tr>
-									<td><strong><%= param.name %></strong></td>
-									<td><%= param.type %></td>
-									<td><%- param.desc %></td>
-								</tr>
-							<% } %>
-						</table>
-					<% } else { %>
-						There are no params for this method.
-					<% } %>
-				</div>
+				<% if (!method.hideParams) { %>
+					<h4>Params</h4>
+					<div class="params">
+						<% if (method.params && method.params[0].name != '') { %>
+							<table>
+								<% for (var i in method.params) { %>
+									<% var param = method.params[i] %>
+									<% if (param.name == '') continue %>
+									<tr>
+										<td><strong><%= param.name %></strong></td>
+										<td><%= param.type %></td>
+										<td><%- param.desc %></td>
+									</tr>
+								<% } %>
+							</table>
+						<% } else { %>
+							There are no params for this method.
+						<% } %>
+					</div>
+				<% } %>
 				<h4>Returns</h4>
 				<div class="returns">
 					<% if (method.returns) { %>
@@ -53,11 +55,17 @@
 					<div class="example"><pre><%= method.exampleResponse %></pre></div>
 				<% } %>
 				<% if (method.exampleCode) { %>
-					<h4>Try It with Sample Code</h4>
+					<% if (method.sampleCodeRun != 'hide') { %>
+						<h4>Try It with Sample Code</h4>
+					<% } else { %>
+						<h4>Sample Code</h4>
+					<% } %>
 					<div class="code"><pre><%= method.exampleCode %></pre></div>
-					<a class="run" href="#methods.<%= category.name %>.<%= method.name %>">Click here to run the code.</a>
-					<br /><br />
-					<div class="example response">Run the code to see a real response.</div>
+					<% if (method.sampleCodeRun != 'hide') { %>
+						<a class="run" href="#methods.<%= category.name %>.<%= method.name %>">Click here to run the code.</a>
+						<br /><br />
+						<div class="example response">Run the code to see a real response.</div>
+					<% } %>
 				<% } %>
 				<a class="top" href="#">back to top</a>
 			</li>
