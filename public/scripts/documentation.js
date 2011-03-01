@@ -58,7 +58,7 @@ ApiClientExamples.prototype = {
 			var code = target.children('div.code').text();
 			Hooks.setRunVars(target_id);
 			var callback = function(result) {
-				var resultString = JSON.stringify(result);
+				var resultString = JSON.stringify(result, null, '\t');
 				target.find('div.response').addClass('responded').text(resultString);
 			};
 			eval(code);
