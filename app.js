@@ -32,4 +32,5 @@ var controllers = require('./controllers/_init');
 controllers.init(app);
 
 var port = process.argv[2] || 41019;
-app.listen(port, '3taps-developers.goldmaninteractive.com');
+var host = process.argv[3] || '3taps-developers.goldmaninteractive.com';
+app.listen(port, host);
