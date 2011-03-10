@@ -38,8 +38,13 @@ var exports = window;
 		<div id="nav">
 			<ol>
 				<li>
-					<a href="/">Intro</a>
-				</li>
+					<a href="/">home</a><br />
+					<ol>
+						<li>
+							<a href="/glossary">glossary</a><br />
+						</li>												
+					</ol>
+				</li>								
 				<% for (var i in documentation) { %>
 					<% var thisCategory = documentation[i] %>
 					<li>

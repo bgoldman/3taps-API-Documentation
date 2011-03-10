@@ -108,7 +108,8 @@ div.params, div.returns {
 	margin-bottom: 20px;
 }
 
-div.params table td, div.returns table td {
+div.params table td, div.returns table td, div.description td {
+	background: #fafafa;
 	border: 1px solid #aaa;
 	padding: 8px;
 	vertical-align: top;

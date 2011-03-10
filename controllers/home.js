@@ -25,6 +25,12 @@ exports.controller = function(app, render) {
 		});
 	});
 	
+	app.get('/glossary', function(req, res) {
+		render(res, 'home/glossary', {
+			documentation: documentation
+		});
+	});
+	
 	app.get('/methods/:category', function(req, res) {
 		var categoryName = req.params.category;
 		
