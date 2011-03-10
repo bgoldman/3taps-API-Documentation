@@ -9,7 +9,7 @@
 				<% if (method.restStructure) { %>
 					<h4><%= method.restStructure %></h4>
 				<% } %>
-				<div class="description"><%= method.description %></div>
+				<div class="description"><%- method.description %></div>
 				<% if (!method.hideParams) { %>
 					<h4>Params</h4>
 					<div class="params">

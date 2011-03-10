@@ -67,7 +67,36 @@
 <a name="event" />
 <h3>Event</h3>
 
-<p>A lot of work goes into making postings from around the web available in 3taps. In order to track the work that takes place, both inside and outside of of 3taps, we use the Status API to track events. Each event has a posting, a name (status), a timestamp, a list of associated errors, and a list of associated attributes. You can get the list of events for a posting form the <a href="/methods/status">Status API</a>, and find out what happened to your postings after you submitted them to 3taps. Additionally, developers are encouraged to send events to the Status API as they find and prepare postings for sending to the Status API.</p>
+<p>A lot of work goes into making postings from around the web available in 3taps. In order to track the work that takes place, both inside and outside of of 3taps, we use the Status API to track events. Each event has a posting, a name (status), a timestamp, a list of associated errors, and a list of associated attributes. Additionally, developers are encouraged to send events to the Status API as they find and prepare postings for sending to the Status API.</p>
+
+<p>The currently supported statuses are:</p>
+
+<table>
+	<tr>
+		<td>found</td>
+		<td>The posting has been found in the original source.</td>
+	</tr>
+	<tr>
+		<td>got</td>
+		<td>The posting data has been retrieved from the original source.</td>
+	</tr>
+	<tr>
+		<td>processed</td>
+		<td>The posting data has been parsed and prepared for posting.</td>
+	</tr>
+	<tr>
+		<td>sent</td>
+		<td>The posting has been sent to the posting API.</td>
+	</tr>
+	<tr>
+		<td>received</td>
+		<td>The posting has been received by the posting API.</td>
+	</tr>
+	<tr>
+		<td>indexed</td>
+		<td>The posting has been saved in 3taps.</td>
+	</tr>								
+</table>
 
 <a name="error" />
 <h3>Error</h3>
