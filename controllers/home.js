@@ -20,7 +20,7 @@ exports.controller = function(app, render) {
 	}
 
 	app.get('/', function(req, res) {
-		res.redirect('http://developers.3taps.net');
+		res.redirect('http://3taps.com/developers');
 		// render(res, 'home/index', {
 		// 	category: 'home'
 		// 	,documentation: documentation
