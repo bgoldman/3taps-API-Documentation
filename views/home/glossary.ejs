@@ -2,69 +2,69 @@
 
 <p>Before diving into the APIs, let's get familiar with the basic concepts of the 3taps universe.</p>
 
-<a name="posting" />
+<a name="posting"></a>
 <h3>Posting</h3>
 
 <p>A posting is a piece of data that represents the availability or need for an exchange of goods or services. Examples of postings are: an auction on eBay.com, a tweet on Twitter, a job listing on Monster.com, a classified on Craigslist.org.</p>
 
 <p>Each posting in 3taps has many attributes that help identify and describe it. The most important of these are:</p>
 
-<a name="posting-postkey" />
+<a name="posting-postkey"></a>
 <h4>Post Key</h4>
 
 <p>When 3taps ingests a posting into the system, it issues that posting a unique identifier called a post key.</p>
 
-<a name="posting-externalID" />
+<a name="posting-externalID"></a>
 <h4>External ID</h4>
 
 <p>Just as the 3taps post key uniquely identifies a posting in 3taps, the external ID uniquely identifies a posting in its <a href="#source">source</a>. For more information on sources, see below.</p>
 
-<a name="posting-annotations" />
+<a name="posting-annotations"></a>
 <h4>Annotations</h4>
 
 <p>Annotations are a list of searchable key/value pairs that can be applied to a posting. Examples of annotations include "make: Honda" and "bedrooms: 2".</p>
 
-<a name="posting-trusted-annotations" />
+<a name="posting-trusted-annotations"></a>
 <h4>"Trusted" Annotations</h4>
 
 <p>While 3taps allows developers to apply any annotations they like to a posting, we also maintain a list of annotations that we feel are "standard," and thus are supported. We call these "trusted annotations." Trusted annotations are associated with categories (see below).</p>
 
-<a name="source" />
+<a name="source"></a>
 <h3>Source</h3>
 
 <p>Each posting has a source. A source is the place that the posting data originated in. For example, the source of an eBay auction is "eBay". Each source in 3taps is given a unique 5-character code to identify it. The source for eBay is E_BAY. You can get the full list of sources from the <a href="/methods/reference">Reference API</a>.</p>
 
-<a name="category" />
+<a name="category"></a>
 <h3>Category</h3>
 
 <p>Every posting has a category. A category is a tag that identifies the type of the posting. Example categories are "Accounting Jobs" or "Antiques for Sale". While external categories may vary across sources, within 3taps, categories are normalized, allowing users to search by category across multiple sources. The list of available categories can be found in the <a href="/methods/reference">Reference API</a>.</p>
 
 <p>Each category in 3taps is given a unique 4-character code to identify it. In addition to the usual fields such as code, and name, categories also have a few special fields:</p>
 
-<a name="category-group" />
+<a name="category-group"></a>
 <h4>Group</h4>
 <p>Similar categories may belong to groups. Like categories, groups are also identified with a 4-character code. Groups treated as special categories, and are returned as categories by the reference API.</p>
 
-<a name="category-annotations" />
+<a name="category-annotations"></a>
 <h4>Annotations</h4>
 <p>As discussed <a href="#posting-annotations">above</a>, annotations are searchable key/value pairs associated with postings. Each category has one or more associated suggested annotations. For example, for the Vehicles category, 3taps recommends annotations like make and model. These suggested annotations are called "trusted annotations".</p>
 
-<a name="location" />
+<a name="location"></a>
 <h4>Location</h4>
 
 <p>Every posting also has a location. A location is a tag that identifies the location of a posting. Example locations are "Los Angeles", or "Illinois." Like categories, locations are normalized across sources, and the full list of locations can be retrieved from the <a href="/methods/reference">Reference API</a>.
 
-<a name="notification" />
+<a name="notification"></a>
 <h3>Notification</h3>
 
 <p>3taps has the ability to send out notifications when new postings become available. These notifications are available in a variety of formats such as XMPP, Apple Push Notification, and email. The Notifier (3taps' Notification System) analyzes postings and sends out notifications in real time to subscriptions.</p>
 
-<a name="subscription" />
+<a name="subscription"></a>
 <h3>Subscription</h3>
 
 <p>In order to receive notifications, you must register a subscription with the <a href="/methods/notifications">Notification API</a>. Your subscription tells the Notifier where to send notifications to (XMPP jid, Apple device token, etc), along with the kinds of postings you'd like to be notified about.<p>
 
-<a name="event" />
+<a name="event"></a>
 <h3>Event</h3>
 
 <p>A lot of work goes into making postings from around the web available in 3taps. In order to track the work that takes place, both inside and outside of of 3taps, we use the Status API to track events. Each event has a posting, a name (status), a timestamp, a list of associated errors, and a list of associated attributes. Additionally, developers are encouraged to send events to the Status API as they find and prepare postings for sending to the Status API.</p>
@@ -99,12 +99,12 @@
 </table>
 </div>
 
-<a name="error" />
+<a name="error"></a>
 <h3>Error</h3>
 
 <p>3taps error messages have two fields: message and code. We're currently working on a comprehensive list of error codes, so in the meantime, you'll have to just examine the message.</p>
 
-<a name="date" />
+<a name="date"></a>
 <h3>Date</h3>
 
 <p>The 3taps API passes dates as strings using the following format: "YYYY/MM/DD hh:mm:ss UTC". It should be noted that dates sent into 3taps should be in UTC. The 3taps API will ignore the timezone field for inbound requests.</p>

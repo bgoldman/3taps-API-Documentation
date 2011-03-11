@@ -1,9 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<link href="/styles/reset.css" rel="stylesheet" type="text/css" />
-<link href="/styles/documentation.css" rel="stylesheet" type="text/css" />
-<link href="/styles/style.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>3taps | Developers Documentation</title>
+<link media="all" type="text/css" rel="stylesheet" href="/css/all.css" />
+<link media="all" type="text/css" rel="stylesheet" href="/css/reset.css" />
+<link media="all" type="text/css" rel="stylesheet" href="/css/documentation.css" />
 
 <script type="text/javascript" src="/scripts/jquery.js"></script>
 <script type="text/javascript" src="/scripts/jquery.scroll-to.js"></script>
@@ -22,50 +24,76 @@ var exports = window;
 <% if (controllerScript) { %>
 	<script type="text/javascript" src="/scripts/helpers/<%= controller %>.js"></script>
 <% } %>
-<title>3taps Developers</title>
-</head>
-<body>
-<div id="header">
-	<div id="header-intro">
 
-	</div>
-	<div id="logo">
-		<h1><a href="/"><span><span class="first">3</span>taps</span></a></h1>
-	</div>
-</div>
-<div id="container">
-	<div id="main">
-		<div id="nav">
-			<ol>
-				<li>
-					<a href="/">home</a><br />
-					<ol>
-						<li>
-							<a href="/glossary">glossary</a><br />
-						</li>												
-					</ol>
-				</li>								
+</head>
+<body class="inner2">
+<div id="wrapper">
+  <div id="header">
+    <div class="section">
+      <h1 class="logo"><a href="http://3taps.com">3 taps beta.</a></h1>
+      <ul class="main-nav">
+        <li><a href="http://3taps.com">Home</a></li>
+        <li><a href="http://3taps.com/data">Data</a></li>
+        <li class="current"><a href="http://3taps.com/developers">Developers</a></li>
+        <li><a href="http://3taps.com/gallery">Gallery</a></li>
+        <li><a href="http://3taps.com/about">About</a></li>
+        <li><a href="http://3taps.com/legal">Legal</a></li>
+      </ul>
+    </div>
+    <div class="intro">
+      <div class="intro-holder">
+        <div class="intro-frame">
+          <div class="intro-frame2">
+            <div class="title">
+              <h2>Developers</h2>
+              <ul class="links">
+                <li class="current"><a href="http://3taps.com/developers">Overview</a></li>
+                <li><a href="/">Documentation</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="main">
+    <div class="tabs-box">
+      <div class="tabs-box-holder">
+        <div class="tab-box-frame">
+          <div class="tabs-box-frame2">
+            <div id="tab-1" class="tab-content">
+				<%- body %>	
+			</div>
+            <div class="controls">
+              <ul class="tabset">
+					<li <%- category == 'glossary' ? 'class="active"' : '' %> >
+						<a class="tab" href="/glossary"> <span class="ico"></span><span>Glossary</span></a></li>
+					</li>
 				<% for (var i in documentation) { %>
 					<% var thisCategory = documentation[i] %>
-					<li>
-						<a href="/methods/<%= thisCategory.name %>"><%= thisCategory.name %></a>
-						<ol>
-							<% for (var j in thisCategory.methods) { %>
-								<% var method = thisCategory.methods[j] %>
-								<li><a href="/methods/<%= thisCategory.name %>#methods.<%= thisCategory.name %>.<%= method.name %>"><%= method.name %></a></li>
-							<% } %>
-						</ol>
+					<li <%- category == thisCategory ? 'class="active"' : '' %>>
+						<a class="tab" href="/methods/<%= thisCategory.name.toLowerCase() %>"> <span class="ico"><img src="/images/ico-<%= thisCategory.name.toLowerCase() %>.png" alt="image description" width="21" height="20" /></span><span><%= thisCategory.name %> API</span></a></li>
 					</li>
 				<% } %>
-			</ol>
-		</div>
-		<div id="body">
-			<%- body %>
-		</div>
+            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div id="footer">
+	    <div class="footer-holder">
+	      <div class="copyright">&copy; <%= (new Date()).getFullYear() %> 3taps Inc.</div>
+	      <ul class="main-nav">
+	        <li><a href="http://3taps.com/data">Data</a></li>
+	        <li><a href="http://3taps.com/developers">Developers</a></li>
+	        <li><a href="http://3taps.com/gallery">Gallery</a></li>
+	        <li><a href="http://3taps.com/about">About</a></li>
+	        <li><a href="http://3taps.com/legal">Legal</a></li>
+	        <li><a href="http://3taps.com/privacy">Privacy</a></li>
+	      </ul>
+	    </div>
+	  </div>
 	</div>
-</div>
-<div id="footer">
-	&copy; <%= (new Date()).getFullYear() %> 3taps
-</div>
-</body>
-</html>
+	</body>
+	</html>	

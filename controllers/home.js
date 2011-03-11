@@ -20,14 +20,17 @@ exports.controller = function(app, render) {
 	}
 
 	app.get('/', function(req, res) {
-		render(res, 'home/index', {
-			documentation: documentation
-		});
+		res.redirect('http://developers.3taps.net');
+		// render(res, 'home/index', {
+		// 	category: 'home'
+		// 	,documentation: documentation
+		// });
 	});
 	
 	app.get('/glossary', function(req, res) {
 		render(res, 'home/glossary', {
-			documentation: documentation
+			category: 'glossary'
+			,documentation: documentation
 		});
 	});
 	
