@@ -4,7 +4,7 @@ var threeTapsClient = new threeTapsClient(authId, agentId);
 
 var Hooks = {
 	setRunVars: function(targetId) {
-		var client = targetId.split('.')[1];
+		var client = targetId.split('.')[1].toLowerCase();
 		clientCapitalized = client.substr(0, 1).toUpperCase() + client.substr(1);
 		var clientVar = 'threeTaps' + clientCapitalized + 'Client';
 		window[clientVar] = threeTapsClient[client];
