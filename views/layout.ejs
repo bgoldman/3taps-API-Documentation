@@ -47,8 +47,8 @@ var exports = window;
             <div class="title">
               <h2>Developers</h2>
               <ul class="links">
-                <li class="current"><a href="http://3taps.com/developers">Overview</a></li>
-                <li><a href="/glossary">Documentation</a></li>
+                <li><a href="http://3taps.com/developers">Overview</a></li>
+                <li class="current"><a href="/glossary">Documentation</a></li>
               </ul>
             </div>
           </div>
@@ -69,6 +69,9 @@ var exports = window;
 					<li <%- category == 'glossary' ? 'class="active"' : '' %> >
 						<a class="tab" href="/glossary"> <span class="ico"></span><span>Glossary</span></a></li>
 					</li>
+					<li <%- category == 'errors' ? 'class="active"' : '' %> >
+						<a class="tab" href="/errors"> <span class="ico"></span><span>Errors</span></a></li>
+					</li>					
 				<% for (var i in documentation) { %>
 					<% var thisCategory = documentation[i] %>
 					<li <%- category == thisCategory ? 'class="active"' : '' %>>

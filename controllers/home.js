@@ -34,6 +34,13 @@ exports.controller = function(app, render) {
 		});
 	});
 	
+	app.get('/errors', function(req, res) {
+		render(res, 'home/errors', {
+			category: 'errors'
+			,documentation: documentation
+		});
+	});	
+	
 	app.get('/methods/:category', function(req, res) {
 		var categoryName = req.params.category;
 		

@@ -55,12 +55,17 @@ div.params, div.returns {
 	margin-bottom: 20px;
 }
 
-div.params table td, div.returns table td, div.description table td {
+div.params table td, div.returns table td, 
+div.description table td, div.description table th {
 	background: #fafafa;	
 	border: 1px solid #aaa;
 	padding: 8px;
 	vertical-align: top;
 	white-space: pre-line;
+}
+
+div.description table th {
+	font-weight: bold;
 }
 
 div.code {
