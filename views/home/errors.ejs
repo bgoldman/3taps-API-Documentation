@@ -1,0 +1,213 @@
+<h2>Errors and Warnings</h2>
+
+<p>Nobody's perfect. When the 3taps system finds a problem in a request, it will return a message and code identifying that problem. Problems are classified as warnings and errors. Errors are fatal problems, while warnings are non-fatal.</p>
+
+<a name="errors"></a>
+<h3>Errors</h3>
+
+<a name="general-errors"></a>
+<h4>General Errors</h4>
+<div class="description">
+	<table>
+		<tr>
+			<th>Code</th>
+			<th>Message</th>
+		</tr>
+		<tr>
+			<td>400</td>
+			<td>The request was malformed.</td>
+		</tr>
+		<tr>
+			<td>401</td>
+			<td>The client is not authorized for this request.</td>
+		</tr>
+		<tr>
+			<td>403</td>
+			<td>Nobody is authorized for this request.</td>
+		</tr>
+		<tr>
+			<td>404</td>
+			<td>The requested method or data could not be found.</td>
+		</tr>
+		<tr>
+			<td>500</td>
+			<td>Unknown server error.</td>
+		</tr>	
+	</table>
+</div>
+
+<a name="posting-errors"></a>
+<h4>Posting API Errors</h4>
+
+<div class="description">
+900-909 Duplicates
+	<table>
+		<tr>
+			<th>Code</th>
+			<th>Message</th>
+		</tr>
+		<tr>
+			<td>900</td>
+			<td>The posting is a duplicate based on externalID and source.</td>
+		</tr>
+	</table>
+
+910-919 No Data
+	<table>
+		<tr>
+			<th>Code</th>
+			<th>Message</th>
+		</tr>
+		<tr>
+			<td>911</td>
+			<td>The posting is empty.</td>
+		</tr>
+	</table>
+
+920-929 Invalid/Missing Data
+	<table>
+		<tr>
+			<th>Code</th>
+			<th>Message</th>
+		</tr>
+		<tr>
+			<td>921</td>
+			<td>Posting source is invalid/missing.</td>
+		</tr>
+		<tr>
+			<td>922</td>
+			<td>Posting category is invalid/missing.</td>
+		</tr>
+		<tr>
+			<td>923</td>
+			<td>Posting location is invalid/missing.</td>
+		</tr>
+		<tr>
+			<td>924</td>
+			<td>Posting heading is missing.</td>
+		</tr>
+		<tr>
+			<td>925</td>
+			<td>Posting timestamp is missing.</td>
+		</tr>
+		<tr>
+			<td>926</td>
+			<td>Posting accountName is too long (max 255).</td>
+		</tr>
+		<tr>
+			<td>928</td>
+			<td>Posting externalURL is invalid/missing.</td>
+		</tr>		
+	</table>
+
+930-939 Timing
+	<table>
+		<tr>
+			<th>Code</th>
+			<th>Message</th>
+		</tr>
+		<tr>
+			<td>930</td>
+			<td>The posting is expired.</td>
+		</tr>
+		<tr>
+			<td>931</td>
+			<td>The posting has a timestamp in the future.</td>
+		</tr>	
+	</table>
+
+940-949 Parsing
+	<table>
+		<tr>
+			<th>Code</th>
+			<th>Message</th>
+		</tr>
+		<tr>
+			<td>940</td>
+			<td>The posting could not be parsed as JSON.</td>
+		</tr>	
+	</table>
+</div>
+
+
+<a name="grabbing-errors"></a>
+<h4>Grabber Errors</h4>
+
+<div class="description">
+800-809 Duplicates
+	<table>
+		<tr>
+			<th>Code</th>
+			<th>Message</th>
+		</tr>
+		<tr>
+			<td>800</td>
+			<td>The posting is a duplicate based on externalID and source.</td>
+		</tr>
+	</table>
+
+810-819 No Data
+	<table>
+		<tr>
+			<th>Code</th>
+			<th>Message</th>
+		</tr>
+		<tr>
+			<td>810</td>
+			<td>Page not found</td>
+		</tr>
+		<tr>
+			<td>811</td>
+			<td>Data not provided after multiple attempts.</td>
+		</tr>
+	</table>
+
+820-829 Invalid/Missing Data
+	<table>
+		<tr>
+			<th>Code</th>
+			<th>Message</th>
+		</tr>
+		<tr>
+			<td>820</td>
+			<td>Posting deleted from the source.</td>
+		</tr>
+	</table>
+
+830-839 Timing
+	<table>
+		<tr>
+			<th>Code</th>
+			<th>Message</th>
+		</tr>
+		<tr>
+			<td>830</td>
+			<td>The posting is expired.</td>
+		</tr>
+		<tr>
+			<td>831</td>
+			<td>The posting has a timestamp in the future.</td>
+		</tr>	
+	</table>
+</div>
+
+<a name="warnings"></a>
+<h3>Warnings</h3>
+
+<a name="warnings-posting"></a>
+<h4>Posting API Warnings</h4>
+<div class="description">
+
+920-929 Invalid/Missing Data
+	<table>
+		<tr>
+			<th>Code</th>
+			<th>Message</th>
+		</tr>
+		<tr>
+			<td>927</td>
+			<td>Posting image URL(s) invalid.</td>
+		</tr>
+	</table>
+
+</div>
